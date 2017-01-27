@@ -2,3 +2,8 @@ body {
   background-color: #212121;
   color: #eceff1;
 }
+
+.row {
+
+  margin-top: 7rem;
+}
