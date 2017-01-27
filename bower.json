@@ -1,0 +1,29 @@
+{
+  "name": "y",
+  "homepage": "y",
+  "authors": [
+    "y"
+  ],
+  "description": "y",
+  "main": "y",
+  "keywords": [
+    "y"
+  ],
+  "license": "y",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "libs",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.6.1",
+    "angular-route": "^1.6.1",
+    "firebase": "^3.6.7",
+    "materialize": "^0.98.0",
+    "jquery": "^3.1.1"
+  }
+}
