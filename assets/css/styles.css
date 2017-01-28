@@ -11,3 +11,14 @@ body {
 #loginModal {
   background-color: #9e9e9e;
 }
+#loginButton {
+  background-color: #9e9e9e;
+}
+
+#registerModal {
+  background-color: #616161;
+}
+.valign-wrapper {
+  min-height: 14rem;
+  background-color: #eceff1;
+}
