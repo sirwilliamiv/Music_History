@@ -14,11 +14,11 @@
     <div class="modal-content">
       <h4>Login</h4>
       <form>
-        <input type="email" name="" placeholder="Email">
-        <input type="password" name="" placeholder="Password">
-        <input type="submit" class="modal-action modal-close waves-effect waves-green btn-flat" value="LOGIN">
+        <input type="email" ng-model="user_email" placeholder="Email">
+        <input type="password" ng-model="user_password" placeholder="Password">
+        <input type="submit" class="modal-action modal-close waves-effect waves-green btn-flat" ng-click="userLogin()" value="LOGIN">
       </form>
-      <p>New? <button id="registerButton" data-target="registerModal" class="modal-action modal-close waves-effect waves-white btn-flat">Register</button></p>
+      <p>New? <button id="registerButton"  data-target="registerModal" class="modal-action modal-close waves-effect waves-white btn-flat">Register</button></p>
     </div>
   </div> <!-- End Login Modal  -->
 
@@ -27,11 +27,11 @@
     <div class="modal-content">
       <h4>Register</h4>
       <form>
-        <input type="text" name="" placeholder="First">
-        <input type="text" name="" placeholder="Last">
-        <input type="email" name="" placeholder="Email">
-        <input type="password" name="" placeholder="Password">
-        <input type="submit" class="modal-action modal-close waves-effect waves-green btn-flat" value="Register">
+        <input type="text" ng-model="firstName" placeholder="First">
+        <input type="text" ng-model="lastName" placeholder="Last">
+        <input type="email" ng-model="user_email" placeholder="Email">
+        <input type="password" ng-model="user_password"  placeholder="Password">
+        <input type="submit" ng-click="userInfo()" class="modal-action modal-close waves-effect waves-green btn-flat" value="Register">
       </form>
   </div>    <!-- End Register Modal  -->
 </div>  <!-- End container  -->

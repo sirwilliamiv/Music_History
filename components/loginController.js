@@ -1,12 +1,23 @@
-app.controller('loginController', function($scope, $location){
+app.controller('loginController', function($scope, $location, authFactory){
 console.log("login")
 
 
+$scope.userLogin = () => {
+
+   return authFactory.login($scope.user_email, $scope.user_password)
+  .then(() => $location.url('/userView'))
+}
+$scope.userInfo = () => {
+  console.log($scope.user_email)
+  authFactory.createUser($scope.user_email,$scope.user_password)
+  .then(()=> $location.url('/userView'))
+
+  }
 
 
 
 
-
+//---Materialize
 
 $('#loginButton').click(() => {
   $('#loginModal').modal('open')
