@@ -7,6 +7,9 @@ $scope.addSong = () => {
   getDataFactory.addSong($scope.title, $scope.artist, $scope.album, $scope.length)
   .then(() => console.log('Much SUCCESS!')).catch((error) => console.log(error))
 }
+$scope.logout = () => {
+  authFactory.logout().then(()=> alert('youloggedout'))
+}
 
 
 
