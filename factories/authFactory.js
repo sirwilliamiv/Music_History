@@ -1,6 +1,7 @@
 app.factory('authFactory', ($q)=> {
   return {
     login(email, pass) {
+      console.log("auth", email)
       return $q.resolve(firebase.auth().signInWithEmailAndPassword(email,pass).then((data) =>{
         console.log(data.uid)
         return UID = data.uid
@@ -8,6 +9,7 @@ app.factory('authFactory', ($q)=> {
     },
 
     createUser(first,last,email,pass) {
+      console.log("email", email)
       return $q.resolve(firebase.auth().createUserWithEmailAndPassword(email, pass))
 
     },

@@ -4,12 +4,12 @@ console.log("login")
 
 $scope.userLogin = () => {
 
-   return authFactory.login($scope.user_email, $scope.user_password)
+    authFactory.login($scope.user_email, $scope.user_password)
   .then(() => $location.url('/userView'))
 }
 $scope.userInfo = () => {
   console.log($scope.user_email)
-  authFactory.createUser($scope.user_email,$scope.user_password)
+   authFactory.createUser($scope.user_email,$scope.user_password)
   .then(()=> $location.url('/userView'))
 
   }
