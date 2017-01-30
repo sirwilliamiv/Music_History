@@ -35,17 +35,17 @@
     </li>
   </ul> <!-- end of playlist -->
 
-  <button id="addSongButton" data-target="addSong"> Add Song</button>
+  <button id="addSongButton" class="waves-effect grey btn-large" data-target="addSong"> Add Song</button>
 <!-- AddSong Modal  -->
    <div id="addSong" class="modal">
     <div class="modal-content">
       <h4>Add Song</h4>
       <form>
-        <input type="text" name="" placeholder="Title">
-        <input type="text" name="" placeholder="Artist">
-        <input type="text" name="" placeholder="Album">
-        <input type="text" name="" placeholder="Length">
-        <input type="submit" class="modal-action modal-close waves-effect waves-green btn-flat" value="Save Song">
+        <input type="text" ng-model="title" placeholder="Title">
+        <input type="text" ng-model="artist" placeholder="Artist">
+        <input type="text" ng-model="album" placeholder="Album">
+        <input type="text" ng-model="length" placeholder="Length">
+        <input type="submit" ng-click="addSong(title, artist, album, length)" class="modal-action modal-close waves-effect waves-green btn-flat" value="Save Song">
       </form>
   </div> <!-- End AddSong Modal  -->
 </div>  <!-- end of container -->

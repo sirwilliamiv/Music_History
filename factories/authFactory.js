@@ -16,14 +16,16 @@ app.factory('authFactory', ($q)=> {
     getUser () {
       return $q((resolve, reject) => {
         // const unsubscribe = firebase.auth().onAuthStateChanged(user) => {
-        //   unsubscribe()
+        const unsubscribe = firebase.auth().onAuthStateChanged((user) => {
+          unsubscribe()
           if (user) {
             resolve(user)
           } else {
             reject()
           }
 
-      })
-    }
-  }
-})
+        }) //end const unsubscribe
+      }) //end return getUser
+    } //end getUser
+  } //end of return object
+}) //end factory

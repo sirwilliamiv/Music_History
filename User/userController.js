@@ -1,7 +1,21 @@
-app.controller('userController', function($scope, $location){
+app.controller('userController', function($scope, $location,authFactory, getDataFactory){
 
 console.log("user")
+//addsong
+$scope.addSong = () => {
 
+  getDataFactory.addSong($scope.title, $scope.artist, $scope.album, $scope.length)
+  .then(() => console.log('Much SUCCESS!')).catch((error) => console.log(error))
+}
+
+
+
+
+
+
+
+
+//materialize
   $('.collapsible').collapsible({
     accordion: false, // A setting that changes the collapsible behavior to expandable instead of the default accordion style
     onOpen: function(el) { console.log('Open'); }, // Callback for Collapsible open
