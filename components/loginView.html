@@ -1,0 +1,37 @@
+
+<div class="container">
+  <div class="valign-wrapper col s6">
+    <div class="imageHolder valign col s6">
+     <button id="loginButton" data-target="loginModal" class="valign"> LOGIN</button>
+    </div>
+  </div>
+
+
+
+
+  <!-- Login Modal  -->
+  <div id="loginModal" class="modal">
+    <div class="modal-content">
+      <h4>Login</h4>
+      <form>
+        <input type="email" ng-model="user_email" placeholder="Email">
+        <input type="password" ng-model="user_password" placeholder="Password">
+        <input type="submit" class="modal-action modal-close waves-effect waves-green btn-flat" ng-click="userLogin()" value="LOGIN">
+      </form>
+      <p>New? <button id="registerButton"  data-target="registerModal" class="modal-action modal-close waves-effect waves-white btn-flat">Register</button></p>
+    </div>
+  </div> <!-- End Login Modal  -->
+
+<!-- Register Modal  -->
+  <div id="registerModal" class="modal">
+    <div class="modal-content">
+      <h4>Register</h4>
+      <form>
+        <input type="text" ng-model="firstName" placeholder="First">
+        <input type="text" ng-model="lastName" placeholder="Last">
+        <input type="email" ng-model="user_email" placeholder="Email">
+        <input type="password" ng-model="user_password"  placeholder="Password">
+        <input type="submit" ng-click="userInfo()" class="modal-action modal-close waves-effect waves-green btn-flat" value="Register">
+      </form>
+  </div>    <!-- End Register Modal  -->
+</div>  <!-- End container  -->
